@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3ead8">
+    <title>Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <nav class="page-marker-nav" aria-label="Diary sections">
+      <ul class="page-markers">
+        <li><a href="#cover" aria-label="Cover"><span class="page-marker__label">Cover</span></a></li>
+        <li><a href="#about" aria-label="Who She Is"><span class="page-marker__label">Who She Is</span></a></li>
+        <li><a href="#journey" aria-label="Journey"><span class="page-marker__label">Journey</span></a></li>
+        <li><a href="#projects" aria-label="Projects"><span class="page-marker__label">Projects</span></a></li>
+        <li><a href="#favorites" aria-label="Joys"><span class="page-marker__label">Joys</span></a></li>
+        <li><a href="#contact" aria-label="Contact"><span class="page-marker__label">Contact</span></a></li>
+      </ul>
+    </nav>
+    <main id="main-content">
+      <section class="cover-spread" id="cover" aria-labelledby="cover-title">
+        <div class="cover-light-sweep" aria-hidden="true"></div>
+        <canvas class="cover-particles" aria-hidden="true"></canvas>
+        <div class="cover-spread__content">
+          <p class="cover-spread__eyebrow">A creative diary</p>
+          <h1 id="cover-title"><!-- PLACEHOLDER: sister's name -->Sister's Name</h1>
+          <p class="cover-spread__tagline"><!-- PLACEHOLDER: short professional tagline -->Art director, image-maker, and collector of little moments.</p>
+          <span class="cover-spread__note" aria-hidden="true">A life in ideas &amp; images</span>
+        </div>
+      </section>
+
+      <section class="page-shell intro-spread" id="about" aria-labelledby="intro-title">
+        <article class="paper-card intro-card" id="who-she-is">
+          <p class="intro-card__eyebrow">A note about me</p>
+          <h2 id="intro-title">Who She Is</h2>
+          <p><!-- PLACEHOLDER: about text, paragraph 1 -->A few words about who she is, what she loves to make, and the perspective she brings to her work.</p>
+          <p><!-- PLACEHOLDER: about text, paragraph 2 -->Share a little about her path, the ideas that inspire her, and the details she notices along the way.</p>
+          <p><!-- PLACEHOLDER: about text, paragraph 3 -->Add a final personal note about the kind of stories and creative worlds she hopes to bring to life.</p>
+        </article>
+      </section>
+
+      <section class="page-shell timeline-spread" id="journey" aria-labelledby="journey-title">
+        <header class="timeline-heading">
+          <p class="intro-card__eyebrow">A few chapters</p>
+          <h2 id="journey-title">Her Life Journey</h2>
+        </header>
+        <div class="timeline-track">
+          <svg class="timeline-leaf timeline-leaf--one" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M26.8 4.7C16.5 4.1 7.4 8.5 6.2 16.1c-.6 4 2.4 6.7 6.1 6.2C20 21.2 24.9 13.8 26.8 4.7Z" fill="var(--color-accent)" />
+            <path d="M5.5 27.4c4.1-7 9.1-11.3 16.3-16.7" fill="none" stroke="var(--color-accent-deep)" stroke-linecap="round" stroke-width="1.5" />
+          </svg>
+          <svg class="timeline-leaf timeline-leaf--two" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M6 5.2c10.3-.5 19.4 3.9 20.6 11.5.6 4-2.4 6.7-6.1 6.2C12.8 21.7 7.9 14.3 6 5.2Z" fill="var(--color-accent-deep)" />
+            <path d="M27.3 27.9c-4.2-7-9.2-11.3-16.4-16.7" fill="none" stroke="var(--color-accent)" stroke-linecap="round" stroke-width="1.5" />
+          </svg>
+          <svg class="timeline-leaf timeline-leaf--three" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M26.8 4.7C16.5 4.1 7.4 8.5 6.2 16.1c-.6 4 2.4 6.7 6.1 6.2C20 21.2 24.9 13.8 26.8 4.7Z" fill="var(--color-accent-deep)" />
+            <path d="M5.5 27.4c4.1-7 9.1-11.3 16.3-16.7" fill="none" stroke="var(--color-accent)" stroke-linecap="round" stroke-width="1.5" />
+          </svg>
+          <ol class="timeline-list">
+            <li class="timeline-entry"><article class="paper-card timeline-card">
+              <p class="timeline-year"><!-- PLACEHOLDER: milestone 1 year -->20XX</p>
+              <h3><!-- PLACEHOLDER: milestone 1 title -->The First Spark</h3>
+              <p><!-- PLACEHOLDER: milestone 1 description -->Add a note about an early creative influence or the moment she first imagined a future in art and design.</p>
+            </article></li>
+            <li class="timeline-entry"><article class="paper-card timeline-card">
+              <p class="timeline-year"><!-- PLACEHOLDER: milestone 2 year -->20XX–20XX</p>
+              <h3><!-- PLACEHOLDER: milestone 2 title -->Learning Her Craft</h3>
+              <p><!-- PLACEHOLDER: milestone 2 description -->Add a sentence about her education, training, or the creative community where she began to find her voice.</p>
+            </article></li>
+            <li class="timeline-entry"><article class="paper-card timeline-card">
+              <p class="timeline-year"><!-- PLACEHOLDER: milestone 3 year -->20XX</p>
+              <h3><!-- PLACEHOLDER: milestone 3 title -->A First Creative Role</h3>
+              <p><!-- PLACEHOLDER: milestone 3 description -->Describe an early role or opportunity that helped her turn curiosity into hands-on creative work.</p>
+            </article></li>
+            <li class="timeline-entry"><article class="paper-card timeline-card">
+              <p class="timeline-year"><!-- PLACEHOLDER: milestone 4 year -->20XX</p>
+              <h3><!-- PLACEHOLDER: milestone 4 title -->Finding Her Direction</h3>
+              <p><!-- PLACEHOLDER: milestone 4 description -->Share a step that shaped her point of view and brought her closer to art direction.</p>
+            </article></li>
+            <li class="timeline-entry"><article class="paper-card timeline-card">
+              <p class="timeline-year"><!-- PLACEHOLDER: milestone 5 year -->20XX–Now</p>
+              <h3><!-- PLACEHOLDER: milestone 5 title -->Making Work That Matters</h3>
+              <p><!-- PLACEHOLDER: milestone 5 description -->Sum up the work she does today and the kinds of creative stories she hopes to shape next.</p>
+            </article></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page-shell projects-spread" id="projects" aria-labelledby="projects-title">
+        <header class="timeline-heading">
+          <p class="intro-card__eyebrow">Selected work</p>
+          <h2 id="projects-title">A Few Things She’s Made</h2>
+        </header>
+        <div class="postcard-grid">
+          <article class="postcard-reveal">
+            <div class="postcard" tabindex="0" role="group" data-project-label="Project One" aria-label="Project One postcard, front face. Press Enter or Space to flip.">
+              <div class="postcard__face postcard__front" aria-hidden="false">
+                <div class="postcard__image postcard__image--one">
+                  <span class="postcard__title"><!-- PLACEHOLDER: project 1 title -->Project One</span>
+                  <span class="postcard__hint">Tap to turn</span>
+                </div>
+              </div>
+              <div class="postcard__face postcard__back" aria-hidden="true" inert>
+                <span class="postcard__stamp" aria-hidden="true">✳</span>
+                <p class="postcard__role"><!-- PLACEHOLDER: project 1 role -->Role: Art Direction</p>
+                <p><!-- PLACEHOLDER: project 1 one-line description -->A short line about the idea and the world she brought to life.</p>
+                <p><!-- PLACEHOLDER: what she made for project 1 -->Made: campaign concept, imagery, and visual identity.</p>
+                <a href="project-1.html">View full case study <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="postcard-reveal">
+            <div class="postcard" tabindex="0" role="group" data-project-label="Project Two" aria-label="Project Two postcard, front face. Press Enter or Space to flip.">
+              <div class="postcard__face postcard__front" aria-hidden="false">
+                <div class="postcard__image postcard__image--two">
+                  <span class="postcard__title"><!-- PLACEHOLDER: project 2 title -->Project Two</span>
+                  <span class="postcard__hint">Tap to turn</span>
+                </div>
+              </div>
+              <div class="postcard__face postcard__back" aria-hidden="true" inert>
+                <span class="postcard__stamp" aria-hidden="true">✳</span>
+                <p class="postcard__role"><!-- PLACEHOLDER: project 2 role -->Role: Creative Direction</p>
+                <p><!-- PLACEHOLDER: project 2 one-line description -->A short line about the brief, the feeling, and the audience.</p>
+                <p><!-- PLACEHOLDER: what she made for project 2 -->Made: art direction, photography, and campaign assets.</p>
+                <a href="project-2.html">View full case study <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="postcard-reveal">
+            <div class="postcard" tabindex="0" role="group" data-project-label="Project Three" aria-label="Project Three postcard, front face. Press Enter or Space to flip.">
+              <div class="postcard__face postcard__front" aria-hidden="false">
+                <div class="postcard__image postcard__image--three">
+                  <span class="postcard__title"><!-- PLACEHOLDER: project 3 title -->Project Three</span>
+                  <span class="postcard__hint">Tap to turn</span>
+                </div>
+              </div>
+              <div class="postcard__face postcard__back" aria-hidden="true" inert>
+                <span class="postcard__stamp" aria-hidden="true">✳</span>
+                <p class="postcard__role"><!-- PLACEHOLDER: project 3 role -->Role: Art Direction &amp; Design</p>
+                <p><!-- PLACEHOLDER: project 3 one-line description -->A short line about a story shaped through thoughtful visual details.</p>
+                <p><!-- PLACEHOLDER: what she made for project 3 -->Made: concept, design system, and launch materials.</p>
+                <a href="project-3.html">View full case study <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-shell favorite-spread" id="favorites" aria-labelledby="favorite-title">
+        <header class="timeline-heading favorite-heading">
+          <p class="intro-card__eyebrow">Off the clock</p>
+          <h2 id="favorite-title">Favorite Things</h2>
+        </header>
+        <div class="favorite-collage">
+          <figure class="favorite-item favorite-item--lights">
+            <svg viewBox="0 0 220 110" role="img" aria-labelledby="lights-title">
+              <title id="lights-title">A strand of warm string lights</title>
+              <path d="M8 24C48 4 73 44 112 24s60-15 100-1" fill="none" stroke="var(--color-accent-deep)" stroke-linecap="round" stroke-width="2" />
+              <g fill="var(--color-glow)" stroke="var(--color-accent)" stroke-width="1.5">
+                <path d="M30 18v9l-5 6h12l-5-6v-9z" /><circle cx="31" cy="35" r="5" />
+                <path d="M76 27v9l-5 6h12l-5-6v-9z" /><circle cx="77" cy="44" r="5" />
+                <path d="M123 22v9l-5 6h12l-5-6v-9z" /><circle cx="124" cy="39" r="5" />
+                <path d="M169 17v9l-5 6h12l-5-6v-9z" /><circle cx="170" cy="34" r="5" />
+              </g>
+            </svg>
+            <figcaption>Soft lights, slow evenings</figcaption>
+          </figure>
+
+          <figure class="favorite-item favorite-item--tickets">
+            <div class="ticket-stack" aria-label="A pair of movie ticket stubs">
+              <div class="ticket-stub ticket-stub--back" aria-hidden="true"><span>ADMIT ONE</span><b>✦</b></div>
+              <div class="ticket-stub"><span>TONIGHT</span><b>✳</b><small>ROW A · SEAT 04</small></div>
+            </div>
+            <figcaption>One more movie</figcaption>
+          </figure>
+
+          <figure class="favorite-item favorite-item--candle">
+            <svg viewBox="0 0 100 130" role="img" aria-labelledby="candle-title">
+              <title id="candle-title">A little candle glowing in the evening</title>
+              <path d="M50 10c-11 12-8 22 0 27 8-7 9-16 0-27z" fill="var(--color-glow)" stroke="var(--color-accent)" stroke-width="1.5" />
+              <path d="M49 39v10" stroke="var(--color-accent-deep)" stroke-linecap="round" stroke-width="2" />
+              <rect x="28" y="48" width="44" height="66" rx="7" fill="var(--color-paper)" stroke="var(--color-accent)" stroke-width="1.5" />
+              <path d="M28 65h44" stroke="var(--color-line)" stroke-width="1.5" />
+              <ellipse cx="50" cy="114" rx="27" ry="5" fill="var(--color-paper-shadow)" />
+            </svg>
+            <figcaption>A candle at dusk</figcaption>
+          </figure>
+
+          <figure class="favorite-item favorite-item--mug">
+            <svg viewBox="0 0 130 120" role="img" aria-labelledby="mug-title">
+              <title id="mug-title">A warm mug with curls of steam</title>
+              <path d="M43 34c-8-9 8-12 0-22M64 34c-8-9 8-12 0-22M84 34c-8-9 8-12 0-22" fill="none" stroke="var(--color-accent)" stroke-linecap="round" stroke-width="2" />
+              <path d="M27 39h67v48c0 14-11 24-25 24H52c-14 0-25-10-25-24z" fill="var(--color-paper-shadow)" stroke="var(--color-accent-deep)" stroke-width="2" />
+              <path d="M94 50h11c11 0 14 9 12 18-2 8-7 12-17 12h-6" fill="none" stroke="var(--color-accent-deep)" stroke-width="6" />
+              <path d="M39 58h43" stroke="var(--color-glow)" stroke-linecap="round" stroke-width="4" />
+            </svg>
+            <figcaption>Something warm to sip</figcaption>
+          </figure>
+        </div>
+        <p class="favorite-caption">Little rituals, lovely stories, and evenings that take their time.</p>
+      </section>
+
+      <section class="page-shell contact-spread" id="contact" aria-labelledby="contact-title">
+        <p class="contact-closing" id="contact-title"><span class="contact-closing__text">Let’s make something lovely.</span></p>
+        <div class="envelope" tabindex="0" role="group" data-state="closed" aria-label="Closed envelope. Press Enter or Space to open.">
+          <div class="envelope__back" aria-hidden="true"></div>
+          <div class="envelope__letter" aria-hidden="true" inert>
+            <p class="envelope__letter-title">A note from me</p>
+            <a href="mailto:your.email@example.com"><!-- PLACEHOLDER: email address -->your.email@example.com</a>
+            <a href="https://www.linkedin.com/in/your-name/"><!-- PLACEHOLDER: LinkedIn profile -->LinkedIn profile</a>
+            <a href="https://www.behance.net/your-name"><!-- PLACEHOLDER: Behance profile -->Behance portfolio</a>
+          </div>
+          <div class="envelope__pocket" aria-hidden="true"></div>
+          <div class="envelope__flap" aria-hidden="true"></div>
+        </div>
+        <p class="contact-hint">Open the envelope to say hello</p>
+      </section>
+    </main>
+  </body>
+</html>
